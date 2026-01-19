@@ -75,7 +75,7 @@
         # Add entrypoint to automatically start the pipeline when container starts
         ENTRYPOINT ["python", "pipeline.py"]
 
-        <img width="322" height="240" alt="image" src="https://github.com/user-attachments/assets/dd1ed060-6c53-4532-a9db-e8c239c3b55c" />
+<img width="322" height="240" alt="image" src="https://github.com/user-attachments/assets/dd1ed060-6c53-4532-a9db-e8c239c3b55c" />
 
         # Save the file and build the docker Image (-t tag/name)
         docker build -t test:pandas .
@@ -116,7 +116,7 @@
         COPY pipeline.py /code/pipeline.py
         ENTRYPOINT ["python", "pipeline.py"]
 
-        <img width="525" height="311" alt="image" src="https://github.com/user-attachments/assets/4c41fdf2-0eab-4765-a0aa-3b592f13a502" />
+<img width="525" height="311" alt="image" src="https://github.com/user-attachments/assets/4c41fdf2-0eab-4765-a0aa-3b592f13a502" />
 
         # Now to Run build and run 
         docker build -t test:pandas .
