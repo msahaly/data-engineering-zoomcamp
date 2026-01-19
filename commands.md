@@ -25,15 +25,15 @@
     whereis google-chrome
  
 
-===
+=============
 ## Docker Commands
 
 
-===
+-------------
 ## Python Commands
 
     #install pandas 
         pip install pandas
 
-===
+-------------
 ## Recommded Commands! 
