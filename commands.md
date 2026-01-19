@@ -30,9 +30,11 @@
 
 -------------
 ## Docker Commands
+# $\color{red}{\text{Red Title}}$
+## $\color{orange}{\text{Orange Subtitle}}$
+### $\color{lightblue}{\text{Blue Indented Text}}$
 
-
->   ### <font color='blue'>Run Containers</font>
+>   ### Run Containers
 
         # Just Run containers
         docker run python:3.13.11-slim
