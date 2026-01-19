@@ -155,7 +155,8 @@
         which python
 
 >   ### UV virtual environment
-```bash
+
+```markdown
         # Initialize new paython version using UV inside project folder 
         # Note: It will create .env/ nad pyproject.toml
         uv init --python 3.13 
