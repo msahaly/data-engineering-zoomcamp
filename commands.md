@@ -4,7 +4,7 @@
 ## Linux Commands
 
 >   ### Remove application from linux (Google-CHROME for example)
-
+```bash
         # Remove Application from linux (Google-CHROME for example)
         # Check size of Chrome's configuration and cache
         du -sh ~/.config/google-chrome ~/.cache/google-chrome
@@ -26,7 +26,7 @@
 
         # This should return nothing (Verification)
         whereis google-chrome
-    
+ ```   
 
 -------------
 ## DOCKER Commands
@@ -80,7 +80,7 @@
         # Save the file and build the docker Image (-t tag/name)
         docker build -t test:pandas .
 
-        #$\color{red}{\text{WITHOUT ENTRY POINT IN Dockerfile}}$
+        # WITHOUT ENTRY POINT IN Dockerfile
         # Run the docker container now (If it has NO ENTRYPOINT in Dockerfile)
         docker run test:pandas
         docker run -it --entrypoint=bash --rm test:pandas
@@ -89,11 +89,12 @@
         # Run the pipeline now and it shall work and show data and also export .parquet file
         python pipeline.py 12
 
-        #$\color{red}{\text{WITH ENTRY POINT IN Dockerfile}}$
+        #WITH ENTRY POINT IN Dockerfile
         # Run the container (If it has the ENTRYPOINT in Dockerfile)
         docker run -it --rm test:pandas 12
 
 >   ### Upgrade our container to use UV as well
+```bash
         # Copy uv binary from official uv image (multi-stage build pattern)
         COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/
 
@@ -115,7 +116,7 @@
         RUN uv sync --locked
         COPY pipeline.py /code/pipeline.py
         ENTRYPOINT ["python", "pipeline.py"]
-
+```
 <img width="525" height="311" alt="image" src="https://github.com/user-attachments/assets/4c41fdf2-0eab-4765-a0aa-3b592f13a502" />
 
         # Now to Run build and run 
