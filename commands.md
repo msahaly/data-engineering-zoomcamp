@@ -4,7 +4,7 @@
 ## Linux Commands
 
 >   ### Remove application from linux (Google-CHROME for example)
-```bash
+```sh
         # Remove Application from linux (Google-CHROME for example)
         # Check size of Chrome's configuration and cache
         du -sh ~/.config/google-chrome ~/.cache/google-chrome
