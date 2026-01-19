@@ -32,7 +32,7 @@
 ## Docker Commands
 
 
->   ### Run Containers
+>   ### <font color='blue'>Run Containers</font>
 
         # Just Run containers
         docker run python:3.13.11-slim
