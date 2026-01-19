@@ -6,5 +6,5 @@ Run docker with the python:3.13 image. Use an entrypoint bash to interact with t
 
 What's the version of pip in the image?
 
-Answer pip 23.3
+#### Answer pip 23.3
 
