@@ -29,11 +29,6 @@
     
 
 -------------
-## Docker Commands
-# $\color{red}{\text{Red Title}}$
-## $\color{orange}{\text{Orange Subtitle}}$
->   ### $\color{#007acc}{\text{Run Containers}}$
-
 >   ### Run Containers
 
         # Just Run containers
