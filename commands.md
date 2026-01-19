@@ -60,11 +60,13 @@
 
         # Remove all containers that worked previously Using their IDs
         docker rm `docker ps -aq` 
-        
+
 ```
 
 >   ### Let's Build our Container 
 >   ### Let's dockerize our pipeline with its UV python and dependencies)
+
+```bash
         # Create Dockerfile
         FROM python:3.13.11-slim
 
@@ -97,6 +99,8 @@
         #WITH ENTRY POINT IN Dockerfile
         # Run the container (If it has the ENTRYPOINT in Dockerfile)
         docker run -it --rm test:pandas 12
+        
+```
 
 >   ### Upgrade our container to use UV as well
 ```bash
