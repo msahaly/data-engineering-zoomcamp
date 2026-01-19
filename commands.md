@@ -32,7 +32,7 @@
 ## DOCKER Commands
 
 >   ### Run Containers
-
+```bash
         # Just Run containers
         docker run python:3.13.11-slim
 
@@ -48,7 +48,10 @@
         ## Remove once exit.
         docker run -it --entrypoint=bash -v $(pwd)/test:/app/test --rm python:3.13.11-slim
 
+```
+
 >   ### List Containers
+```bash
         # List all 
         docker ps -a
 
@@ -57,6 +60,8 @@
 
         # Remove all containers that worked previously Using their IDs
         docker rm `docker ps -aq` 
+        
+```
 
 >   ### Let's Build our Container 
 >   ### Let's dockerize our pipeline with its UV python and dependencies)
