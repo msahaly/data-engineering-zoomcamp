@@ -1,5 +1,5 @@
 # General list of commands used 
-===
+
 
 ## Linux Commands
 
@@ -28,9 +28,35 @@
     whereis google-chrome
  
 
-
+-------------
 ## Docker Commands
 
+### Run Containers
+
+    # Just Run containers
+    docker run python:3.13.11-slim
+
+    # Make them interactive
+    docker run -it  python:3.13.11-slim
+
+    # Sepcify entry point script to run - bash for this example 
+    docker run -it --entrypoint=bash  python:3.13.11-slim
+
+    ## Add localfiles to the run container from $(pwd)/test:/app/test.
+    docker run -it --entrypoint=bash -v $(pwd)/test:/app/test python:3.13.11-slim
+
+    ## Remove once exit.
+    docker run -it --entrypoint=bash -v $(pwd)/test:/app/test --rm python:3.13.11-slim
+
+### list of docker containers 
+    # List all 
+    docker ps -a
+
+    # List all container IDs 
+    docker ps -aq
+
+    # Remove all containers that worked previously Using their IDs
+    docker rm `docker ps -aq` 
 
 -------------
 ## Python Commands
@@ -40,3 +66,10 @@
 
 -------------
 ## Recommded Commands! 
+
+### Select virtualBox python 
+    source ~/projects/zoomcamp/de_env/bin/activate,
+
+    deactivate
+
+    which python
