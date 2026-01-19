@@ -2,6 +2,7 @@
 ===
 
 ## Linux Commands
+### remove application from linux
     #Remove Application from linux (Google-CHROME for example)
     # Check size of Chrome's configuration and cache
     du -sh ~/.config/google-chrome ~/.cache/google-chrome
@@ -25,7 +26,7 @@
     whereis google-chrome
  
 
-=============
+
 ## Docker Commands
 
 
