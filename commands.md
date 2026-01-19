@@ -30,12 +30,9 @@
 
 -------------
 ## Docker Commands
-<ul>
-  <h3>Indented Title</h3>
-</ul>
 
->  ### Indented Title within Blockquote
-    **Run Containers**
+
+>  #### Run Containers
 
         # Just Run containers
         docker run python:3.13.11-slim
@@ -52,7 +49,7 @@
         ## Remove once exit.
         docker run -it --entrypoint=bash -v $(pwd)/test:/app/test --rm python:3.13.11-slim
 
-     ** list Containers ** 
+>  #### List Containers
         # List all 
         docker ps -a
 
