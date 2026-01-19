@@ -3,7 +3,7 @@
 
 ## Linux Commands
 
->   ### remove application from linux (Google-CHROME for example)
+>   ### Remove application from linux (Google-CHROME for example)
 
         # Remove Application from linux (Google-CHROME for example)
         # Check size of Chrome's configuration and cache
@@ -65,9 +65,32 @@
 -------------
 ## Recommded Commands! 
 
->   ### Select virtualBox python 
+>   ### Select virtual Environment python 
         source ~/projects/zoomcamp/de_env/bin/activate,
 
         deactivate
 
         which python
+
+>   ### UV virtual environment
+        # Initialize new paython version using UV inside project folder 
+        # Note: It will create .env/ nad pyproject.toml
+        uv init --python 3.13 
+
+        # Check the UV version of python
+        uv run python -V
+
+        # Check which python in uv
+        uv run which python
+
+        # Add dependencies to the UV version of python
+        # Note: It will update the pyproject.toml dependencies array
+        uv add pandas pyarrow
+
+        
+        # Run the UV python 
+        uv run python pipeline.py 
+
+        # Run the UV python with ARGUMENTS
+        uv run python pipeline.py 12
+
