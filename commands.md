@@ -32,7 +32,7 @@
 ## DOCKER Commands
 
 >   ### Run Containers
-```bash
+```sh
         # Just Run containers
         docker run python:3.13.11-slim
 
@@ -66,7 +66,7 @@
 >   ### Let's Build our Container 
 >   ### Let's dockerize our pipeline with its UV python and dependencies)
 
-```bash
+```dockerfile
         # Create Dockerfile
         FROM python:3.13.11-slim
 
@@ -106,7 +106,7 @@
 ```
 
 >   ### Upgrade our container to use UV as well
-```bash
+```dockerfile
         # Copy uv binary from official uv image (multi-stage build pattern)
         COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/
 
