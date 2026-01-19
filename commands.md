@@ -82,8 +82,11 @@
         # Add entrypoint to automatically start the pipeline when container starts
         ENTRYPOINT ["python", "pipeline.py"]
 
+```
+
 <img width="322" height="240" alt="image" src="https://github.com/user-attachments/assets/dd1ed060-6c53-4532-a9db-e8c239c3b55c" />
 
+```bash
         # Save the file and build the docker Image (-t tag/name)
         docker build -t test:pandas .
 
@@ -99,7 +102,7 @@
         #WITH ENTRY POINT IN Dockerfile
         # Run the container (If it has the ENTRYPOINT in Dockerfile)
         docker run -it --rm test:pandas 12
-        
+
 ```
 
 >   ### Upgrade our container to use UV as well
@@ -152,6 +155,7 @@
         which python
 
 >   ### UV virtual environment
+```bash
         # Initialize new paython version using UV inside project folder 
         # Note: It will create .env/ nad pyproject.toml
         uv init --python 3.13 
@@ -177,3 +181,4 @@
         the run as follows normally
         python pipeline.py 12
 
+```
