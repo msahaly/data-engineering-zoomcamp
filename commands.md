@@ -183,7 +183,42 @@
         # Run pgcli to connect to postgres DB server
         uv run pgcli -h localhost -p 5432 -u root -d ny_taxi
 ```
+>   ### Connect to POSTGRES using python sqlalchemy
 
+```sql
+        # Connect to postgresql server using python instead of pgcli using sqlalchemy
+        !uv add sqlalchemy
+        from sqlalchemy import create_engine
+
+        # Create engine //root=user, root@ = passwordm localhost=server, :5432=pory, /ny_taxi=db
+        engine = create_engine('postgresql://root:root@localhost:5432/ny_taxi')
+
+        #Check the schema that pandas intend to use = create table = for your df
+        print(pd.io.sql.get_schema(df, name='yellow_taxi_data', con=engine))
+
+        # Insert data into table - if table exists, replace it (Note: we initialized it with 0 rows in df.head(0))
+        df.head(0).to_sql(name='yellow_taxi_data', con=engine, if_exists='replace')
+
+        # Insert/Appending data (100,000 rows appended)
+        df.head(100000).to_sql(name='yellow_taxi_data', con=engine, if_exists='append')
+
+        # Slize DF into chunks (of 100,000 rows each)
+        df_iter = pd.read_csv(
+                url,
+                dtype=dtype,
+                parse_dates=parse_dates,
+                iterator=True,
+                chunksize=100000
+                )
+        
+        # To watch/monitor progress over iterable
+        !uv add tqdm
+        from tqdm import tqdm
+
+        # To insert data (Chuncked) into DB table using loop (tqdm is used around iterable to show action)
+        for df_chunk in tqdm(df_iter):
+        df_chunk.to_sql(name='yellow_taxi_data', con=engine, if_exists='append') 
+```
 >   ### Named volume vs Bind mount:
 
         Named volume (name:/path): Managed by Docker, easier
