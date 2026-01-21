@@ -1,7 +1,8 @@
 # DE ZoomCamp
 
-## Run the pipeline 
->   ### After creating & Decorizing the first pipeline
+## How to use?!
+>   ### Run the pipeline 
+>   #### This will display the data automatically and will create the parquet file
 
 ```bash
     # Run the docker image "test:pandas" passing arugmner month=12
