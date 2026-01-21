@@ -1,13 +1,9 @@
 # General list of commands used 
 
 [Linux Commands](#linux-Commands)  
-
 [Docker Commands](#docker-commands)  
-
 [Python Commands](#python-commands)  
-
 [POSTGRES](#postgres)  
-
 [Recommended Commands!](#recommended-commands)  
 
 
