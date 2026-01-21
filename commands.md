@@ -247,7 +247,7 @@
 
         # Run pgcli
         uv run pgcli -h localhost -p 5432 -u root -d ny_taxi
-
+ 
         # Connect to postgresql server using python instead of pgcli using sqlalchemy
         !uv add sqlalchemy
         from sqlalchemy import create_engine
