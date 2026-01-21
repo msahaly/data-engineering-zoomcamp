@@ -178,6 +178,11 @@
         postgres:18
 ```
 
+>   ### Named volume vs Bind mount:
+
+        Named volume (name:/path): Managed by Docker, easier
+        Bind mount (/host/path:/container/path): Direct mapping to host filesystem, more control
+
 
 -------------
 ## Recommded Commands! 
