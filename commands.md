@@ -1,6 +1,7 @@
 # General list of commands used 
 
 [Linux Commands](#linux-Commands)  
+>        [Run Containers](#run-containers)
 [Docker Commands](#docker-commands)  
 [Python Commands](#python-commands)  
 [POSTGRES](#postgres)  
