@@ -154,7 +154,7 @@
 
 -------------
 ## POSTGRES
->   ### RUN postgres container 
+>   ### RUN postgres container (DB SERVER)
 ```bash
 
         # With named volume
@@ -176,6 +176,12 @@
         -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql \
         -p 5432:5432 \
         postgres:18
+
+        # Install/Add pgcli 
+        uv add --dev pgcli
+
+        # Run pgcli to connect to postgres DB server
+        uv run pgcli -h localhost -p 5432 -u root -d ny_taxi
 ```
 
 >   ### Named volume vs Bind mount:
@@ -183,7 +189,15 @@
         Named volume (name:/path): Managed by Docker, easier
         Bind mount (/host/path:/container/path): Direct mapping to host filesystem, more control
 
+>   ### PostGres Commands
+```sql
+        # list tables
+        \dt
 
+        #list datatypes
+        \dT
+        
+```
 -------------
 ## Recommded Commands! 
 
