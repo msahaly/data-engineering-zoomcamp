@@ -17,6 +17,7 @@ df['month'] = month
 print(df.head())
 
 #convert DF for Parquet file
+#Later-on we can upload this to S3 for example
 df.to_parquet(f"output_{month}.parquet")
 
 

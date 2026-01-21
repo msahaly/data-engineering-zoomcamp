@@ -28,6 +28,14 @@
         whereis google-chrome
  ```   
 
+ ```sh
+        # Stop a service
+        sudo systemctl stop docker
+
+        # disk free." It reports how much disk space is being used and how much is available on all your mounted file systems.
+        df -h
+ ```
+
 -------------
 ## DOCKER Commands
 
@@ -145,6 +153,33 @@
         pip install pandas
 
 -------------
+## POSTGRES
+>   ### RUN postgres container 
+```bash
+
+        # With named volume
+        docker run -it --rm \
+        -e POSTGRES_USER="root" \
+        -e POSTGRES_PASSWORD="root" \
+        -e POSTGRES_DB="ny_taxi" \
+        -v ny_taxi_postgres_data:/var/lib/postgresql \
+        -p 5432:5432 \
+        postgres:18
+
+        # Or with bind mount:
+        mkdir ny_taxi_postgres_data
+
+        docker run -it \
+        -e POSTGRES_USER="root" \
+        -e POSTGRES_PASSWORD="root" \
+        -e POSTGRES_DB="ny_taxi" \
+        -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql \
+        -p 5432:5432 \
+        postgres:18
+```
+
+
+-------------
 ## Recommded Commands! 
 
 >   ### Select virtual Environment python 
@@ -182,4 +217,14 @@
         the run as follows normally
         python pipeline.py 12
 
+```
+>   ### Doker Volumes
+```bash
+        # This will show you docker volumns
+        # Example is: [-v ny_taxi_postgres_data:/var/lib/postgresql] when running postgresql
+        # It shall list "ny_taxi_postgres_data" from previous example (usually /var/lib/docker/volumes/)
+        docker volume ls
+
+        # Inspect the volume details To see exactly where on your Ubuntu/Debian disk this data is physically stored:
+        docker volume inspect ny_taxi_postgres_data
 ```
