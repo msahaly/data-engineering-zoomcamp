@@ -1,6 +1,10 @@
 # General list of commands used 
 
-[Jump to ](#docker-commands)
+[Linux Commands](#linux-Commands)
+[Docker Commands](#docker-commands)
+[Python Commands](#python-commands)
+[POSTGRES](#postgres)
+[Recommended Commands!](#recommended-commands!)
 
 ## Linux Commands
 
@@ -235,7 +239,7 @@
 ```
 
 -------------
-## Recommded Commands! 
+## Recommended Commands! 
 
 >   ### Select virtual Environment python 
         source ~/projects/zoomcamp/de_env/bin/activate,
