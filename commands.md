@@ -1,10 +1,17 @@
 # General list of commands used 
 
 [Linux Commands](#linux-Commands)  
-        - [Run Containers](#run-containers)
+        - [Run Containers](#run-containers)  
+        - [List Containers](#list-containers)  
+        - [Let's Build our Container](#let's-build-our-container)  
+        - [Upgrade our container to use UV as well](#upgrade-our-container-to-use-uv-as-well)  
+
 [Docker Commands](#docker-commands)  
 [Python Commands](#python-commands)  
 [POSTGRES](#postgres)  
+        - [RUN postgres container (DB SERVER)](#run-postgres-container-(db-server))  
+        - [Connect to POSTGRES using python sqlalchemy](#connect-to-postgres-using-python-sqlalchemy)  
+        
 [Recommended Commands!](#recommended-commands)  
 
 
