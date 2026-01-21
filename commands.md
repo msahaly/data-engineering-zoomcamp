@@ -248,6 +248,11 @@
         # Run pgcli
         uv run pgcli -h localhost -p 5432 -u root -d ny_taxi
  
+
+```
+>   ### Connect to POSTGRES using python sqlalchemy
+```sql
+
         # Connect to postgresql server using python instead of pgcli using sqlalchemy
         !uv add sqlalchemy
         from sqlalchemy import create_engine
@@ -279,9 +284,8 @@
 
         # To insert data (Chuncked) into DB table using loop (tqdm is used around iterable to show action)
         for df_chunk in tqdm(df_iter):
-        df_chunk.to_sql(name='yellow_taxi_data', con=engine, if_exists='append')
-        
-```     
+        df_chunk.to_sql(name='yellow_taxi_data', con=engine, if_exists='append') 
+```
 >   ### Doker Volumes
 ```bash
         # This will show you docker volumns
