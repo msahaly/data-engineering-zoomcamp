@@ -204,6 +204,19 @@
         !uv add sqlalchemy
         from sqlalchemy import create_engine
 
+        prefix = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/'
+        url = f'{prefix}/yellow_tripdata_2021-01.csv.gz'
+        df = pd.read_csv(url, nrows=100)
+        
+        # Display first rows
+        print(df.head())
+        
+        # Check data types
+        print(df.dtypes)
+        
+        # Check data shape
+        print(df.shape)
+
         # Create engine //root=user, root@ = passwordm localhost=server, :5432=pory, /ny_taxi=db
         engine = create_engine('postgresql://root:root@localhost:5432/ny_taxi')
 
