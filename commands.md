@@ -422,3 +422,131 @@
         --name pgadmin \
         dpage/pgadmin4
 ```
+
+## Docker-Compose 
+>  ### Create docker-compose.yaml 
+```bash
+        # Create docker-compose.yaml file 
+        services:
+        pgdatabase:
+        image: postgres:18
+        environment:
+        - POSTGRES_USER=root
+        - POSTGRES_PASSWORD=root
+        - POSTGRES_DB=ny_taxi
+        volumes:
+        - "ny_taxi_postgres_data:/var/lib/postgresql:rw"
+        ports:
+        - "5432:5432"
+        pgadmin:
+        image: dpage/pgadmin4
+        environment:
+        - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+        - PGADMIN_DEFAULT_PASSWORD=root
+        volumes:
+        - "pgadmin_data:/var/lib/pgadmin"
+        ports:
+        - "8085:80"
+
+        volumes:
+        ny_taxi_postgres_data:
+        pgadmin_data:
+```
+
+>   ### docker-compose commands
+```bash
+        # Run docker-compose
+        docker-compose up
+
+        # Shutting down containers Ctrl+C Or
+        docker-compose down
+
+        # Run containers in the background (Free up terminal)
+        docker-compose up -d
+
+        # View logs
+        docker-compose logs
+
+        # Stop and remove volumes
+        docker-compose down -v
+
+        # check the network link:
+        docker network ls
+
+        # Run ingest pipeline again for that network (it's pipeline_default for network name)
+        docker run -it \
+        --network=pipeline_default \
+        taxi_ingest:v001 \
+        --pg-user=root \
+        --pg-pass=root \
+        --pg-host=pgdatabase \
+        --pg-port=5432 \
+        --pg-db=ny_taxi \
+        --target-table=yellow_taxi_trips_2021_2 \
+        --year=2021 \
+        --month=2 \
+        --chunksize=100000
+
+        # List all containers
+        docker ps -a
+
+        # Remove specific container
+        docker rm <container_id>
+
+        # Remove all stopped containers
+        docker container prune
+```
+>   ### docker images
+```bash
+        # List all images
+        docker images
+
+        # Remove specific image
+        docker rmi taxi_ingest:v001
+        docker rmi test:pandas
+
+        # Remove all unused images
+        docker image prune -a
+```  
+>   ### docker volumes
+```bash
+        # List volumes
+        docker volume ls
+
+        # Remove specific volumes
+        docker volume rm ny_taxi_postgres_data
+        docker volume rm pgadmin_data
+
+        # Remove all unused volumes
+        docker volume prune
+```
+
+>   ### docker networks
+```bash
+        # List networks
+        docker network ls
+
+        # Remove specific network
+        docker network rm pg-network
+
+        # Remove all unused networks
+        docker network prune
+```
+
+>   ### Complete cleanup (removes everything):
+```bash
+        # ⚠️ Warning: This removes ALL Docker resources!
+        docker system prune -a --volumes
+```
+
+>   ### CClean up local files:
+```bash
+        # Remove parquet files
+        rm *.parquet
+
+        # Remove Python cache
+        rm -rf __pycache__ .pytest_cache
+
+        # Remove virtual environment (if using venv)
+        rm -rf .venv
+```
