@@ -14,11 +14,11 @@
         
 [Recommended Commands!](#recommended-commands)  
 [Dockerize and run ingestdata pipeline](#dockerize-and-run-ingestdata-pipeline)  
-        - [Create Network](#create-network) 
+        - [Create Network](#create-network)  
         - [Run posgres server on the network and give it a name](#run-posgres-server-on-the-network-and-give-it-a-name)  
         - [Dockerize the pipeline to connect to the postgres server over the network](#dockerize-the-pipeline-to-connect-to-the-postgres-server-over-the-network)   
         - [pgAdmin](#pgadmin)  
-        
+
          
 
 
