@@ -13,7 +13,7 @@
         - [Connect to POSTGRES using python sqlalchemy](#connect-to-postgres-using-python-sqlalchemy)  
         
 [Recommended Commands!](#recommended-commands)  
-[Dockerize and run ingestdata pipeline](#rdockerize-and-run-ingestdata-pipeline)  
+[Dockerize and run ingestdata pipeline](#dockerize-and-run-ingestdata-pipeline)  
 
 
 
