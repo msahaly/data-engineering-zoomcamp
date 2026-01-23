@@ -349,7 +349,11 @@
         for df_chunk in tqdm(df_iter):
         df_chunk.to_sql(name='yellow_taxi_data', con=engine, if_exists='append') 
 ```
-
+```bash
+        #Convert notebook.ipyno to python script and rename it
+        uv run jupyter nbconvert --to=script notebook.ipynb
+        mv notebook.py ingest_data.py
+```
 >   ### Doker Volumes
 ```bash
         # This will show you docker volumns
@@ -359,4 +363,41 @@
 
         # Inspect the volume details To see exactly where on your Ubuntu/Debian disk this data is physically stored:
         docker volume inspect ny_taxi_postgres_data
+```
+
+
+## Dockerize and run ingest_data pipeline
+>   ### Create Network
+```bash
+        # Create a netowrk 
+        docker network create pg-network
+```
+>   ### Run posgres server on the network and give it a name 
+```bash
+        # Add nework and name to the postgres server container
+        docker run -it \
+        -e POSTGRES_USER="root" \
+        -e POSTGRES_PASSWORD="root" \
+        -e POSTGRES_DB="ny_taxi" \
+        -v ny_taxi_postgres_data:/var/lib/postgresql \
+        -p 5432:5432 \
+        --network=pg-network \
+        --name pgdatabase \
+        postgres:18
+```
+>   ### Dockerize the pipeline to connect to the postgres server over the network
+```bash
+        # Use the name and network in ingest_data pipeline to connect to the postgres server by changing the hostname
+        docker run -it --rm \
+        --network=pg-network \
+        ingest-data:v001\
+        --pg-user=root \
+        --pg-pass=root \
+        --pg-host=pgdatabase \
+        --pg-port=5432 \
+        --pg-db=ny_taxi \
+        --target-table=yellow_taxi_trips_2021 \
+        --year=2021 \
+        --month=1 \
+        --chunksize=100000
 ```
