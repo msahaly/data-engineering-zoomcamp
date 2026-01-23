@@ -1,2 +1,3 @@
 zoomcamp_env/
 *.parquet
+pipeline/ny_taxi_postgres_data/
