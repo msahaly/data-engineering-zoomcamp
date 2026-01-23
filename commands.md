@@ -14,6 +14,11 @@
         
 [Recommended Commands!](#recommended-commands)  
 [Dockerize and run ingestdata pipeline](#dockerize-and-run-ingestdata-pipeline)  
+        - [Create Network](#create-network) 
+        - [Run posgres server on the network and give it a name](#run-posgres-server-on-the-network-and-give-it-a-name) 
+        - [Dockerize the pipeline to connect to the postgres server over the network](#dockerize-the-pipeline-to-connect-to-the-postgres-server-over-the-network)  
+        - [pgAdmin](#pgadmin) 
+         
 
 
 
@@ -402,4 +407,17 @@
         --year=2021 \
         --month=1 \
         --chunksize=100000
+```
+
+>   ### pgAdmin
+```bash 
+        # In another terminal, run pgAdmin on the same network
+        docker run -it \
+        -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
+        -e PGADMIN_DEFAULT_PASSWORD="root" \
+        -v pgadmin_data:/var/lib/pgadmin \
+        -p 8085:80 \
+        --network=pg-network \
+        --name pgadmin \
+        dpage/pgadmin4
 ```
