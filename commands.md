@@ -13,6 +13,8 @@
         - [Connect to POSTGRES using python sqlalchemy](#connect-to-postgres-using-python-sqlalchemy)  
         
 [Recommended Commands!](#recommended-commands)  
+[Dockerize and run ingestdata pipeline](#rdockerize-and-run-ingestdata-pipeline)  
+
 
 
 ## Linux Commands
@@ -364,9 +366,9 @@
         # Inspect the volume details To see exactly where on your Ubuntu/Debian disk this data is physically stored:
         docker volume inspect ny_taxi_postgres_data
 ```
+ 
 
-
-## Dockerize and run ingest_data pipeline
+## Dockerize and run ingestdata pipeline
 >   ### Create Network
 ```bash
         # Create a netowrk 
