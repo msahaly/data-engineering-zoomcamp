@@ -35,7 +35,8 @@ For the trips in November 2025 (lpep_pickup_datetime between '2025-11-01' and '2
 
 Which was the pick up day with the longest trip distance? Only consider trips with trip_distance less than 100 miles (to exclude data errors).
 
-#### Answer: 
+#### Answer: 2025-11-14
+<img width="911" height="494" alt="image" src="https://github.com/user-attachments/assets/b91904d2-58b0-4475-b9ee-0a92d193d9b7" />
 
 
 
