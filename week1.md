@@ -25,7 +25,8 @@ Given the following docker-compose.yaml, what is the hostname and port that pgad
 
 For the trips in November 2025 (lpep_pickup_datetime between '2025-11-01' and '2025-12-01', exclusive of the upper bound), how many trips had a trip_distance of less than or equal to 1 mile?
 
-#### Answer: 
+#### Answer: 8007
+<img width="1059" height="511" alt="image" src="https://github.com/user-attachments/assets/cdecbcc1-31ce-49c6-82b8-fe6d87875505" />
 
 
 ---
