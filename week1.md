@@ -10,6 +10,7 @@ What's the version of pip in the image?
 <img width="643" height="169" alt="image" src="https://github.com/user-attachments/assets/1487efa6-738c-40be-a14b-ae1cfb362101" />
 
 
+---
 
 ### Question 2. Understanding Docker networking and docker-compose
 
@@ -18,6 +19,7 @@ Given the following docker-compose.yaml, what is the hostname and port that pgad
 #### Answer: db:5432
 
 
+---
 
 ### Question 3. Counting short trips
 
@@ -26,6 +28,7 @@ For the trips in November 2025 (lpep_pickup_datetime between '2025-11-01' and '2
 #### Answer: 
 
 
+---
 
 ### Question 4. Longest trip for each day
 
@@ -35,6 +38,7 @@ Which was the pick up day with the longest trip distance? Only consider trips wi
 
 
 
+---
 
 ### Question 5. Biggest pickup zone
 
@@ -43,6 +47,7 @@ Which was the pickup zone with the largest total_amount (sum of all trips) on No
 #### Answer: 
 
 
+---
 
 ### Question 6. Largest tip
 
@@ -53,6 +58,7 @@ Note: it's tip , not trip. We need the name of the zone, not the ID.
 #### Answer: 
 
 
+---
 
 ### Question 7. Terraform Workflow
 
