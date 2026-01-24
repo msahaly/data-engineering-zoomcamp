@@ -58,7 +58,8 @@ For the passengers picked up in the zone named "East Harlem North" in November 2
 
 Note: it's tip , not trip. We need the name of the zone, not the ID.
 
-#### Answer: 
+#### Answer: Yorkville West
+<img width="1278" height="733" alt="image" src="https://github.com/user-attachments/assets/70ccd6c9-a8e6-44be-8ec5-0ffac0ae3da6" />
 
 
 ---
