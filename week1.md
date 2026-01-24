@@ -46,7 +46,8 @@ Which was the pick up day with the longest trip distance? Only consider trips wi
 
 Which was the pickup zone with the largest total_amount (sum of all trips) on November 18th, 2025?
 
-#### Answer: 
+#### Answer: East Harlem North
+<img width="836" height="622" alt="image" src="https://github.com/user-attachments/assets/5ac44521-8172-4544-9717-6dd3a736ee90" />
 
 
 ---
