@@ -10,13 +10,13 @@ import pyarrow.parquet as pq
 @click.option('--pg-host', default='localhost', help='PostgreSQL host')
 @click.option('--pg-port', default='5432', help='PostgreSQL port')
 @click.option('--pg-db', default='ny_taxi', help='PostgreSQL database name')
-@click.option('--year', default=2021, type=int, help='Year of the data')
-@click.option('--month', default=1, type=int, help='Month of the data')
-@click.option('--chunksize', default=100000, type=int, help='Chunk size for ingestion')
-@click.option('--target-table', default='yellow_taxi_data', help='Target table name')
+# @click.option('--year', default=2021, type=int, help='Year of the data')
+# @click.option('--month', default=1, type=int, help='Month of the data')
+# @click.option('--chunksize', default=100000, type=int, help='Chunk size for ingestion')
+# @click.option('--target-table', default='yellow_taxi_data', help='Target table name')
 
 
-def main(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, chunksize, target_table):
+def main(pg_user, pg_pass, pg_host, pg_port, pg_db):
     # pg_user = 'root'
     # pg_pass = 'root'
     # pg_host = 'localhost'
@@ -28,8 +28,8 @@ def main(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, chunksize, targ
     # chunksize = 100000
     # target_table = 'yellow_taxi_data'
 
-    url= './green_tripdata_2025-11.parquet'
-    url_zone = './taxi_zone_lookup.csv'
+    url= f'data/green_tripdata_2025-11.parquet'
+    url_zone = 'data/taxi_zone_lookup.csv'
     engine = create_engine(f'postgresql://{pg_user}:{pg_pass}@{pg_host}:{pg_port}/{pg_db}')
 
     # 1. Open the Parquet file as a ParquetFile object
@@ -37,18 +37,18 @@ def main(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, chunksize, targ
 
     # 2. Iterate through the file in batches (chunks) && # Use 'batch_size' to define how many rows you want per chunk
     first = True
-    for batch in parquet_file.iter_batches(batch_size=chunksize):
+    for batch in parquet_file.iter_batches(batch_size=100000):
         # 3. Convert each batch to a Pandas DataFrame
         df_chunk = batch.to_pandas()
         
         # Process your chunk here...
         print(f"Processing chunk with {len(df_chunk)} rows")
         if first == True:
-            df_chunk.to_sql(name=target_table, con=engine, if_exists='replace') 
+            df_chunk.to_sql(name='green_taxi_data', con=engine, if_exists='replace') 
             # print(pd.io.sql.get_schema(df_chunk, name='green_taxi_data', con=engine))
             first=False
         else:
-            df_chunk.to_sql(name=target_table, con=engine, if_exists='append') 
+            df_chunk.to_sql(name='green_taxi_data', con=engine, if_exists='append') 
 
 
 
@@ -57,7 +57,7 @@ def main(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, chunksize, targ
     df = pd.read_csv(
         url_zone,
         iterator=True,
-        chunksize=chunksize
+        chunksize=100000
     )
 
     initiator = True
