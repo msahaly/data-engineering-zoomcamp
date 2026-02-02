@@ -14,7 +14,8 @@ Within the execution for Yellow Taxi data for the year 2020 and month 12: what i
 
 What is the rendered value of the variable file when the inputs taxi is set to green, year is set to 2020, and month is set to 04 during execution?
 
-#### Answer: 
+#### Answer: green_tripdata_2020-04.csv
+<img width="740" height="263" alt="image" src="https://github.com/user-attachments/assets/8383498d-8b85-4e14-9ec0-6f11edf296d0" />
 
 ---
 
