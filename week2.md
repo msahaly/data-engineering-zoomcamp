@@ -32,7 +32,9 @@ How many rows are there for the Yellow Taxi data for all CSV files in the year 2
 
 How many rows are there for the Green Taxi data for all CSV files in the year 2020?
 
-#### Answer: 
+#### Answer: 1,734,051
+<img width="822" height="337" alt="image" src="https://github.com/user-attachments/assets/fa623921-c1ca-4ce3-835b-4ec0004b74ee" />
+
 
 
 
