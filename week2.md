@@ -23,7 +23,7 @@ What is the rendered value of the variable file when the inputs taxi is set to g
 
 How many rows are there for the Yellow Taxi data for all CSV files in the year 2020?
 
-#### Answer: 24648499
+#### Answer: 24,648,499
 <img width="819" height="423" alt="image" src="https://github.com/user-attachments/assets/c61a1fd6-b96d-4b92-82f7-9cd100af75e4" />
 
 
