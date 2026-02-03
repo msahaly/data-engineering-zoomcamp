@@ -44,7 +44,8 @@ How many rows are there for the Green Taxi data for all CSV files in the year 20
 
 How many rows are there for the Yellow Taxi data for the March 2021 CSV file?
 
-#### Answer: 
+#### Answer: 1,925,152
+<img width="745" height="342" alt="image" src="https://github.com/user-attachments/assets/8b04d7a6-b6a4-4fa5-a151-87a3ec2edb88" />
 
 
 ---
