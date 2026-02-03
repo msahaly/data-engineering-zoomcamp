@@ -54,7 +54,8 @@ How many rows are there for the Yellow Taxi data for the March 2021 CSV file?
 How would you configure the timezone to New York in a Schedule trigger?
 
 
-#### Answer: 
+#### Answer: Add a timezone property set to America/New_York in the Schedule trigger configuration
+<img width="695" height="215" alt="image" src="https://github.com/user-attachments/assets/c49afafb-c6c8-4179-8a7f-e5e2f97de9c7" />
 
 
 
