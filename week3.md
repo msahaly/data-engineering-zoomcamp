@@ -59,7 +59,8 @@ What is the best strategy to make an optimized table in Big Query if your query 
 Write a query to retrieve the distinct VendorIDs between tpep_dropoff_datetime 2024-03-01 and 2024-03-15 (inclusive). Use the materialized table you created earlier in your from clause and note the estimated bytes. Now change the table in the from clause to the partitioned table you created for question 5 and note the estimated bytes processed. What are these values?
 
 
-#### Answer: 
+#### Answer: [310.24 MB for non-partitioned table and 26.84 MB for the partitioned table]
+<img width="717" height="251" alt="image" src="https://github.com/user-attachments/assets/6b4dec1e-5ef0-446c-a9a3-fae76c82642f" />
 
 ---
 
