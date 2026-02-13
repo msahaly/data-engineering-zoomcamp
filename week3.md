@@ -80,7 +80,7 @@ Where is the data stored in the External Table you created?
 
 It is best practice in Big Query to always cluster your data:
 
-#### Answer: 
+#### Answer: [False]
 
 ---
 
@@ -88,7 +88,9 @@ It is best practice in Big Query to always cluster your data:
 
 Write a `SELECT count(*)` query FROM the materialized table you created. How many bytes does it estimate will be read? Why? 
 
-#### Answer: 
+#### Answer: [0 - ZERO - WHY - Because BigQuery is Columnar database that keeps metadata about it - So it will explore that metadata for the required columns instead of the actual data and will return ZERO based on this.]
+<img width="719" height="180" alt="image" src="https://github.com/user-attachments/assets/317a6bdc-3e64-431d-8411-72b5762e1e30" />
+
 
 
 
