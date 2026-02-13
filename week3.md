@@ -48,6 +48,7 @@ What is the best strategy to make an optimized table in Big Query if your query 
 
 #### Answer: [Partition by tpep_dropoff_datetime and Cluster on VendorID]
 <img width="845" height="367" alt="image" src="https://github.com/user-attachments/assets/ead911b0-050d-4819-963f-683c08d4c44c" />
+<img width="587" height="446" alt="image" src="https://github.com/user-attachments/assets/9fb8fa99-7211-41e7-80d4-3d042be9881b" />
 
 
 ---
