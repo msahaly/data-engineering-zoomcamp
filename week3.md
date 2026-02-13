@@ -70,7 +70,9 @@ Write a query to retrieve the distinct VendorIDs between tpep_dropoff_datetime 2
 
 Where is the data stored in the External Table you created?
 
-#### Answer: 
+#### Answer: [GCP Bucket]
+<img width="802" height="448" alt="image" src="https://github.com/user-attachments/assets/3b2b8cd4-37b2-46cf-8d31-70c67f2df7f2" />
+
 
 ---
 
