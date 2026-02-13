@@ -4,7 +4,7 @@
 
 What is count of records for the 2024 Yellow Taxi Data?
 
-#### Answer: 20,332,093
+#### Answer: [20,332,093]
 <img width="809" height="236" alt="image" src="https://github.com/user-attachments/assets/be0f9718-b183-4f0b-af26-c6a201dea3cd" />
 
 
@@ -15,7 +15,9 @@ What is count of records for the 2024 Yellow Taxi Data?
 
 What is the estimated amount of data that will be read when this query is executed on the External Table and the Table?
 
-#### Answer: 
+#### Answer: [0 MB for the External Table and 155.12 MB for the Materialized Table]
+<img width="768" height="334" alt="image" src="https://github.com/user-attachments/assets/aa2d6efc-29c7-43f3-9187-47a04fe29f69" />
+<img width="775" height="346" alt="image" src="https://github.com/user-attachments/assets/957aba85-694c-4369-be6f-d71336022d8c" />
 
 
 ---
