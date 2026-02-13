@@ -35,7 +35,8 @@ Why are the estimated number of Bytes different?
 
 How many records have a fare_amount of 0?
 
-#### Answer: 
+#### Answer: [8,333]
+<img width="754" height="346" alt="image" src="https://github.com/user-attachments/assets/591e84a9-cf8c-4ed0-96f6-06d8552fca28" />
 
 
 
