@@ -26,7 +26,7 @@ What is the estimated amount of data that will be read when this query is execut
 
 Why are the estimated number of Bytes different?
 
-#### Answer: 
+#### Answer: [BigQuery is a columnar database, and it only scans the specific columns requested in the query. Querying two columns (PULocationID, DOLocationID) requires reading more data than querying one column (PULocationID), leading to a higher estimated number of bytes processed.]
 
 
 ---
