@@ -61,6 +61,8 @@ Write a query to retrieve the distinct VendorIDs between tpep_dropoff_datetime 2
 
 #### Answer: [310.24 MB for non-partitioned table and 26.84 MB for the partitioned table]
 <img width="717" height="251" alt="image" src="https://github.com/user-attachments/assets/6b4dec1e-5ef0-446c-a9a3-fae76c82642f" />
+<img width="757" height="267" alt="image" src="https://github.com/user-attachments/assets/b292142b-4249-439e-9da6-49906bed8f33" />
+
 
 ---
 
