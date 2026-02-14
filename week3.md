@@ -1,4 +1,4 @@
-## DE-ZoomCamp > Module #2 > HomeWork
+## DE-ZoomCamp > Module #3 > HomeWork
 
 ### Question 1
 
