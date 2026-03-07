@@ -4,7 +4,8 @@
 
  - What's the output?
 
-#### Answer: []
+#### Answer: [4.1.1]
+<img width="751" height="280" alt="image" src="https://github.com/user-attachments/assets/39d5dff4-340b-4ab4-9c8a-477fef198514" />
 
 
 
