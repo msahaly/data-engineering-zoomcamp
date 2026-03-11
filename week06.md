@@ -34,6 +34,7 @@ How many taxi trips were there on the 15th of November?
 What is the length of the longest trip in the dataset in hours?
 
 #### Answer: [90.6]
+<img width="899" height="152" alt="image" src="https://github.com/user-attachments/assets/31f49288-85b6-4697-8418-ba1854224f5f" />
 
 
 
