@@ -24,6 +24,7 @@
 
 How many taxi trips were there on the 15th of November?
 #### Answer: [162,604]
+<img width="494" height="192" alt="image" src="https://github.com/user-attachments/assets/ea50bb1f-0de0-43f8-9f59-478282bc4cfa" />
 
 
 ---
